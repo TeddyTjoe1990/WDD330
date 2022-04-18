@@ -1,2 +1,2 @@
-# WDD330
+# WDD330 portfolio
 Web Frontend Development II
