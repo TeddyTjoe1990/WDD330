@@ -1,13 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>First Event</title>
-    <link rel="stylesheet" href="../main.css" />
+    <script>
+        function showCongratulations(theButtonClicked) {
+            document.getElementById("result_display").innerHTML =
+                "Congratulations, you did it!<p>You got the page to update!</p>"
+            theButtonClicked.innerHTML = "Click Me Again!"
+        }
+    </script>
 </head>
 
 <body>
-    <button>Click Me!</button>
+    <button onclick="showCongratulations(this)">Click Me!</button>
+    <section id="result_display"></section>
 </body>
 
 </html>
