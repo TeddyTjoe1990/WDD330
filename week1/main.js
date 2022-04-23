@@ -29,7 +29,6 @@ const monthName = [
     "December",
 ];
 
-//--- HEADER DATE DISPLAY --- //
 const day = daysName[completeDate.getDay()];
 const todaysDate = completeDate.getDate();
 const month = monthName[completeDate.getMonth()];
@@ -37,8 +36,9 @@ const year = completeDate.getFullYear();
 
 const currentDate = `${day}, ${todaysDate} ${month} ${year}`;
 
-// Footer Date Display
+document.querySelector("#currentDate").textContent = currentDate;
+
 document.querySelector("#year").textContent = year;
 
-document.getElementById("lu").textContent =
-    " Last Updated: " + document.lastModified
+document.getElementById("update").textContent =
+    " Last Updated: " + document.lastModified;

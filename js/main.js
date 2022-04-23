@@ -29,7 +29,16 @@ const monthName = [
     "December",
 ];
 
+const day = daysName[completeDate.getDay()];
+const todaysDate = completeDate.getDate();
+const month = monthName[completeDate.getMonth()];
+const year = completeDate.getFullYear();
+
+const currentDate = `${day}, ${todaysDate} ${month} ${year}`;
+
+document.querySelector("#currentDate").textContent = currentDate;
+
 document.querySelector("#year").textContent = year;
 
-document.getElementById("lu").textContent =
+document.getElementById("update").textContent =
     " Last Updated: " + document.lastModified;
