@@ -1,3 +1,9 @@
+const toggleMenu = () => {
+    document.querySelector('#navigation').classList.toggle('display');
+}
+
+document.querySelector('#navigation').addEventListener('click', toggleMenu);
+
 let completeDate = new Date();
 const daysName = [
     "Sunday",
@@ -35,10 +41,4 @@ const currentDate = `${day}, ${todaysDate} ${month} ${year}`;
 document.querySelector("#year").textContent = year;
 
 document.getElementById("lu").textContent =
-    " Last Updated: " + document.lastModified;
-
-const toggleMenu = () => {
-    document.querySelector('#navigation').classList.toggle('display');
-}
-
-document.querySelector('#navigation').addEventListener('click', toggleMenu);
+    " Last Updated: " + document.lastModified
