@@ -3,6 +3,23 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
+main {
+    padding: 10px;
+    margin: 10px auto;
+    font-weight: 700;
+    width: 80%;
+    max-width: 100%;
+}
+
+.date {
+    font-size: 15px;
+}
+
+header {
+    color: #016db0;
+    font-size: 28px;
+}
+
 nav ul li:first-child {
     display: block;
 }
@@ -14,7 +31,7 @@ nav ul li {
     margin: 10px;
     background-color: #2A2E34;
     transition: all 0.8s;
-    font-size: 150%;
+    font-size: 120%;
 }
 
 nav ul {
