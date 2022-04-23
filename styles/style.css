@@ -3,6 +3,11 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 
+h1 {
+    background-color: #BEB7A4;
+    padding: 1em;
+}
+
 nav ul li:first-child {
     display: block;
 }
