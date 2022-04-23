@@ -1,4 +1,5 @@
-const links = [{
-    label: "Week1 notes",
-    url: "week1/index.html"
-}]
+const toggleMenu = () => {
+    document.querySelector('#navigation').classList.toggle('display');
+}
+
+document.querySelector('#navigation').addEventListener('click', toggleMenu);
