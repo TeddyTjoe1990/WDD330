@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="images/icon/favicon-16x16.webp" />
+    <title>Week 2 Notes</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>WDD 330 Portfolio</h1>
+    <header>
+        <nav>
+            <ul id="navigation">
+                <li><a href="#" id="menu">&equiv; Menu</a> </li>
+                <li><a href="week1/index.html">Week 1</a></li>
+                <li><a href="week2/index.html">Week 2</a></li>
+                <li><a href="">Week 3</a></li>
+                <li><a href="">Week 4</a></li>
+                <li><a href="">Week 5</a></li>
+                <li><a href="">Week 7</a></li>
+                <li><a href="">Week 8</a></li>
+                <li><a href="">Week 9</a></li>
+                <li><a href="">Week 10</a></li>
+                <li><a href="">Week 11</a></li>
+                <li><a href="">Week 12</a></li>
+                <li><a href="">Week 13</a></li>
+            </ul>
+        </nav>
+        <h2>Week 2 Notes - Javascript</h2>
+    </header>
+    <main>
+        <p>For this week, i learned about Functions. Function are procedures or routines that perform certain tasks. We get to decide what it is they do and how they do it. I'm having a hard time understanding the other syntax for creating a function that
+            is Javascript so I'll try and explain it here.
+        </p>
+        <p>There are some sepereate ways of how to create the same functions. </p>
+        <p>
+            function add() { <br /> ----let number1 = document.getElementById('number1').value; <br/> ----let number2 = document.getElementById('number2').value; <br/> <br/> ----document.getElementById('plus').innerHTML = Number(number1) + Number(number2);
+            <br/> }
+            <br>
+            <br> const add = funtion addNumbers() { <br/> ----let number1 = document.getElementById('number1').value; <br/> ----let number2 = document.getElementById('number2').value; <br/> <br/> ----document.getElementById('plus').innerHTML = Number(number1)
+            + Number(number2);
+            <br/> }
+            <br>
+            <br> const add = () => { <br/> ----let number1 = document.getElementById('number1').value; <br/> ----let number2 = document.getElementById('number2').value; <br/> <br/> ----document.getElementById('plus').innerHTML = Number(number1) + Number(number2);
+            <br/> }
+        </p>
+        <p>
+            The functions above look similar but they are different. For my understanding the first one is quite easy because it was the first one that i learned. The second and thrid forms of the functions, we are not call those function itself, rather we call the
+            const assigned to the function. The first and the third, most likely understandable. I don't understand why we would name a function if we will not be referencing/using that name later on.
+        </p>
+        <p>Another thing from what i read is a Method. Methods are functions that are built in to Javascript. Therefore, we don't need to code them, instead, we just call them. I used many before life console.log but was unaware of the many that there are.
+            Below I will include some of that can be used to manipulate and change arrays.
+        </p>
+        <p>
+            let sequence = [1, 2, 3]; <br /> ---sequence.push(4); <br /> ---sequence.push(5); <br />console.log(sequence); <br />// → [1, 2, 3, 4, 5] <br />console.log(sequence.pop()); <br />// → 5 <br />console.log(sequence); <br />// → [1, 2, 3, 4]
+        </p>
+    </main>
+    <footer>
+        &copy; <span id="year"></span>&nbsp; |
+        <span class="my_name">Teddy Tjoe</span> |
+        <span id="lu"></span>
+    </footer>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
