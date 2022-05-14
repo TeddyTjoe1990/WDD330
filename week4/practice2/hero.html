@@ -15,7 +15,7 @@
 
 <body>
     <header>
-        <h1>Supers</h1>
+        <h1>Super Hero</h1>
         <hr>
     </header>
     <div>
@@ -39,9 +39,7 @@
                 <input type='radio' name='category' value='Antihero' id='anti-hero'>
             </label>
             <p>Super Powers:</p>
-            <label for='origin'>Origin Story:
-                <br><textarea id='origin' name='origin' rows='20' cols='60'></textarea>
-            </label><br>
+
             <div>
                 <label for='flight'>Flight:
                 <input type='checkbox' id='flight' value='Flight' name='powers'>
@@ -59,8 +57,9 @@
                 <input type='checkbox' id='telekinesis' value='Telekinesis' name='powers'>
             </label>
             </div>
-            <label for='age'>Age:
-                <input type='number' id='age' name='age' min=0 step=1></label>
+            <br>
+            <label for='age'>Age: <input type='number' id='age' name='age' min=0 step=1></label><br>
+            <br>
             <div>
                 <label for='City'>Base of Operations:
                 <select name='city' id='city'>
@@ -71,8 +70,12 @@
                     <option value='Coast City'>Coast City</option>
                     <option value='Star City'>Star City</option>
                 </select>
-            </label>
+                </label>
             </div>
+            <br>
+            <label for='origin'>Origin Story:
+                <br><textarea id='origin' name='origin' rows='20' cols='60'></textarea>
+            </label><br>
         </form>
     </div>
     <script src='hero.js'></script>
