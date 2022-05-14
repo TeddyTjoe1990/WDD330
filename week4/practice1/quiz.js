@@ -1,10 +1,10 @@
-const url = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/questions.json";
+const url = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/questions.json';
 
 fetch(url)
     .then(res => res.json())
     .then(quiz => {
-        view.start.addEventListener("click", () => game.start(quiz.questions), false);
-        view.response.addEventListener("click", (event) => game.check(event), false);
+        view.start.addEventListener('click', () => game.start(quiz.questions), false);
+        view.response.addEventListener('click', (event) => game.check(event), false);
     });
 
 // Utility functions
@@ -25,14 +25,14 @@ function shuffle(array) {
 
 // View Object
 const view = {
-    score: document.querySelector("#score strong"),
-    question: document.querySelector("#question"),
-    result: document.querySelector("#result"),
-    info: document.querySelector("#info"),
-    start: document.querySelector("#start"),
-    response: document.querySelector("#response"),
-    timer: document.querySelector("#timer strong"),
-    hiScore: document.querySelector("#hiScore strong"),
+    score: document.querySelector('#score strong'),
+    question: document.querySelector('#question'),
+    result: document.querySelector('#result'),
+    info: document.querySelector('#info'),
+    start: document.querySelector('#start'),
+    response: document.querySelector('#response'),
+    timer: document.querySelector('#timer strong'),
+    hiScore: document.querySelector('#hiScore strong'),
     render(target, content, attributes) {
         for (const key in attributes) {
             target.setAttribute(key, attributes[key]);
@@ -40,10 +40,10 @@ const view = {
         target.innerHTML = content;
     },
     show(element) {
-        element.style.display = "block";
+        element.style.display = 'block';
     },
     hide(element) {
-        element.style.display = "none";
+        element.style.display = 'none';
     },
     setup() {
         this.show(this.question);
@@ -51,8 +51,8 @@ const view = {
         this.show(this.result);
         this.hide(this.start);
         this.render(this.score, game.score);
-        this.render(this.result, " ");
-        this.render(this.info, " ");
+        this.render(this.result, '');
+        this.render(this.info, '');
         this.render(this.hiScore, game.hiScore());
     },
     teardown() {
@@ -62,13 +62,13 @@ const view = {
         this.render(this.hiScore, game.hiScore());
     },
     buttons(array) {
-        return array.map(value => `<button>${value}</button>`).join(" ");
+        return array.map(value => `<button>${value}</button>`).join('');
     }
 };
 
 const game = {
     start(quiz) {
-        console.log("start() invoked");
+        console.log('start() invoked');
         this.score = 0;
         this.questions = [...quiz];
         view.setup();
@@ -84,7 +84,7 @@ const game = {
         }
     },
     ask(name) {
-        console.log("ask() invoked");
+        console.log('ask() invoked');
         if (this.questions.length > 2) {
             shuffle(this.questions);
             this.question = this.questions.pop();
@@ -98,36 +98,36 @@ const game = {
         }
     },
     check(event) {
-        console.log("check(event) invoked");
+        console.log('check(event) invoked');
         const response = event.target.textContent;
         const answer = this.question.realName;
         if (response === answer) {
-            console.log("correct");
-            view.render(view.result, "Correct!", {
-                "class": "correct"
+            console.log('correct');
+            view.render(view.result, 'Correct!', {
+                'class': 'correct'
             });
             this.score++;
             view.render(view.score, this.score);
         } else {
-            console.log("wrong");
+            console.log('wrong');
             view.render(view.result, `Wrong! The correct answer was ${answer}`, {
-                "class": "wrong"
+                'class': 'wrong'
             });
         }
         this.ask();
     },
     gameOver() {
-        console.log("gameOver() invoked");
+        console.log('gameOver() invoked');
         view.render(view.info, `Game Over, you scored ${this.score} point${this.score !== 1 ? 's' : ''}`);
         view.teardown();
         clearInterval(this.timer);
     },
     hiScore() {
-        const hi = localStorage.getItem("highScore") || 0;
+        const hi = localStorage.getItem('highScore') || 0;
         if (this.score > hi || hi === 0) {
-            localStorage.setItem("highScore", this.score);
-            view.render(view.info, "** NEW HIGH SCORE! **");
+            localStorage.setItem('highScore', this.score);
+            view.render(view.info, '** NEW HIGH SCORE! **');
         }
-        return localStorage.getItem("highScore");
+        return localStorage.getItem('highScore');
     }
 }
