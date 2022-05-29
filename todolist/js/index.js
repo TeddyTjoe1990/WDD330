@@ -31,6 +31,8 @@ addBtn.addEventListener("click", function() {
         tasksLeft.textContent = count;
 
         let localSet = localStorage.setItem("todos", JSON.stringify(todosList));
+    } else {
+        alert("This field cannot be empty")
     }
     return count;
 });
