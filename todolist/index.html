@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To Do App</title>
     <link rel="stylesheet" href="todo.css" />
+    <script src="https://kit.fontawesome.com/3ea636a8a6.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -37,29 +38,24 @@
 
     <h1>Todos</h1>
     <section>
-        <ul>
-            <li>
-                <span>&#9746;</span>
-                <span class="hidden">&#9744;</span><span class="task">Task</span><span class="del">&#10005;</span>
-            </li>
-            <li>
-                <span class="hidden">&#9746;</span>
-                <span>&#9744;</span><span class="task"> Task</span><span class="del">&#10005;</span>
-            </li>
-            <li>
-                <span class="hidden">&#9746;</span>
-                <span>&#9744;</span><span class="task"> Task</span><span class="del">&#10005;</span>
-            </li>
-            <li><span id="tasksLeft"></span>tasks left
-                <span id="allT">All</span>
-                <span id="activeT">Active</span>
-                <span id="completedT">Completed</span></li>
+        <div class="addTodo">
+            <input type="text" id="todo" name="todo" placeholder="Add your task" />
+            <button class="addBtn">+</button>
+        </div>
+        <ul class="todosEntries">
         </ul>
-        <div class="addTodo"><input type="text">
-            <button>+</button></div>
+
+        <div class="filter">
+            <span id="tasksLeft" class="tasks"></span>tasks left
+            <span id="all" class="active">All</span>
+            <span id="active">Active</span>
+            <span id="completed">Completed</span>
+        </div>
 
     </section>
-</body>
 
+    <script src="js/index.js"></script>
+
+</body>
 
 </html>
