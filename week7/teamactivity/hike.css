@@ -6,7 +6,7 @@ body {
 
 main>h1 {
     text-align: center;
-    background-color: indianred;
+    background-color: #BEB7A4;
     padding: 1em;
     margin-top: 0;
     margin-bottom: -0.5em;
@@ -32,7 +32,7 @@ img {
 
 .hikeStyles li>h2 {
     text-align: center;
-    background-color: burlywood;
+    background-color: #A47E1B;
     margin-bottom: 0.5em;
 }
 
@@ -68,7 +68,7 @@ img {
 
 .addComment>h2 {
     text-align: center;
-    background-color: indianred;
+    background-color: #BEB7A4;
 }
 
 .addComment input {
