@@ -1,0 +1,57 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body div {
+    display: inline-block;
+    margin: 0 100px;
+    width: 100%;
+}
+
+div:nth-child(2) {
+    border: 2px solid #000000;
+    border-radius: 5px;
+    padding: 10px 30px;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    max-width: 300px;
+    padding: 0
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px black solid;
+}
+
+a {
+    font-family: "Open Sans", sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.actions {
+    max-width: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.name {
+    text-transform: uppercase;
+}
+
+@media(max-width: 700px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
