@@ -1,0 +1,21 @@
+body {
+    background-color: #FFF;
+    font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+    background-color: #BEB7A4;
+    padding: 1em;
+}
+
+h2 {
+    padding-left: 0.5em;
+}
+
+main {
+    padding: 10px;
+    margin: 10px auto;
+    font-weight: 700;
+    width: 80%;
+    max-width: 100%;
+}
