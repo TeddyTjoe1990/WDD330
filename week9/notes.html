@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="images/icon/favicon-16x16.webp" />
+    <title>Week 9 Notes</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>WDD 330 Portfolio</h1>
+    <header>
+        <nav>
+            <ul id="navigation">
+                <li><a href="#" id="menu">&equiv; Menu</a> </li>
+                <li><a href="../week1/index.html">Week 1</a></li>
+                <li><a href="../week2/index.html">Week 2</a></li>
+                <li><a href="../week3/index.html">Week 3</a></li>
+                <li><a href="../week4/index.html">Week 4</a></li>
+                <li><a href="../week5/index.html">Week 5</a></li>
+                <li><a href="../week6/index.html">Week 6</a></li>
+                <li><a href="../week7/index.html">Week 7</a></li>
+                <li><a href="../week8/index.html">Week 8</a></li>
+                <li><a href="../week9/index.html">Week 9</a></li>
+                <li><a href="">Week 10</a></li>
+                <li><a href="">Week 11</a></li>
+                <li><a href="">Week 12</a></li>
+                <li><a href="">Week 13</a></li>
+            </ul>
+        </nav>
+        <h2>Week 9 Notes: The Window Object | HTML5 API</h2>
+        <hr />
+    </header>
+    <main>
+        <ul>
+            <li>
+                <h2>The Window Object</h2>
+            </li>
+            <p>
+                It is supported by all browsers and represents the browser's window. Global Javascript functions, variables and onjects automatically become members of the window object. There are also window object methods. One that is commonly used is the alert() method.
+                It displays an alert box with a message and an ok button.
+            </p>
+            <p>
+                Click <button onclick="sendAlert()">HERE</button> to see an example.
+            </p>
+            <p>
+                The code is simple: <br> function sendAlert() { <br> -----alert("This is an alert() method!"); <br> }
+            </p>
+            <p>
+                Another method is the scrollTo() method. This allows you to have the page take you to a specified destination on the window.
+            </p>
+            <p>
+                Click <button onclick="scrollBottom()">HERE</button> to try the scrollTo() method.
+            </p>
+            <p>
+                Here is the code for the two functions to make the scrollTo() methods work: <br> function scrollBottom() { <br> -----window.scrollTo(0,5000); <br> } <br>
+                <br> function scrollBack() { <br> -----window.scrollTo(0,50); <br> }
+            </p>
+            <hr/>
+            <li>
+                <h2>HTML5 APIs</h2>
+            </li>
+            <p>The HTML5 specification contains a number of APIs that help to gain access to hardware, such as cameras, batteries, geolocation, and the graphics card. Browser Support The support for the data- attribute is generally very good in modern browsers.
+                Even Internet Explorer 8 has partial support! Some older browsers are unable to understand the dataset property, however, but any data- attribute can be found using the standard getAttribute method. So the previous code could be replaced
+                with the following if you still need to support older browsers: const powers = superman.getAttribute('data-powers'); HTML5 APIs 541 Hardware evolves quickly, and APIs are frequently introduced to give developers access, and control new
+                features that appear in the latest devices. In this section, we’ll look at some of the more popular APIs that are already supported in most modern browsers. However, due to the ever-changing nature of most APIs, it’s still best practice
+                to use feature detection before using any of the API methods.</p>
+            <ul>
+                <li><u>Web-storage</u>
+                    <p>The Web Storage API provides a key-value store on the client’s computer that is similar to using cookies but has fewer restrictions, more storage capacity, and is generally easier to use. This makes it perfect for storing information
+                        about users, as well as storing application-specific information that can then be used during future sessions.</p>
+                </li>
+                <li><u>Geolocation</u>
+                    <p>The Geolocation API is used to obtain the geographical position of the device. This means it can be used to find the user’s exact location, then link to nearby places or measure the speed at which the user is moving. This information
+                        can then be used to filter data based on the user’s location or speed and direction of travel. An example of this might be a search function that returns results based on your location. Because of privacy concerns, permission to
+                        use this has to be granted by the user first.</p>
+                </li>
+                <li><u>Web workers</u>
+                    <p>Web workers allow processes to be run in the background, adding support for concurrency in JavaScript. The idea is that any processes that could take a long time are carried out in the background, so a website will continue to function
+                        without fear of the dreaded “script has become unresponsive” message that occurs when a script runs for too long. Web workers use the concept of messages to communicate back and forth between the main script and worker script.</p>
+                </li>
+                <li><u>Websockets</u>
+                    <p>A WebSocket is a network protocol that allows two-way communication between a server and client. Unlike HTTP, which uses a request and response pattern, WebSocket peers can send messages in either direction at any point in time.</p>
+                </li>
+            </ul>
+    </main>
+</body>
+<footer>
+    &copy; <span id="year"></span>&nbsp; |
+    <span class="my_name">Teddy Tjoe</span> |
+    <span id="lu"></span>
+</footer>
+
+<p id="scrollToMessage">Want to go up fast? Click <button onclick="scrollBack()">HERE</button></p>
+
+<script src="../js/main.js"></script>
+
+</html>
