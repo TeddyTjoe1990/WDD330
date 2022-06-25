@@ -10,11 +10,13 @@
 </head>
 
 <body>
-    <img src="img/crnlogo.png" alt="" class="money-img" />
-    <h1>Currency Rate Converter</h1>
-    <p>Select the currency and fill the amount to get the exchange</p>
-
     <div class="container">
+        <div class="header">
+            <img src="img/crnlogo.png" alt="" class="money-img" />
+            <h1>Currency Rate Converter</h1>
+            <p>Select the currency and fill the amount to get the exchange</p>
+        </div>
+
         <div class="currency">
             <select id="currency-one">
               <option value="AED">AED - Arab Emirates Dirham</option>
@@ -82,9 +84,7 @@
         </div>
 
         <div class="switch-rate-container">
-            <button class="btn" id="swap">
-          Switch
-        </button>
+            <button class="btn" id="swap">Switch</button>
             <div class="rate" id="rate"></div>
         </div>
 
@@ -154,7 +154,6 @@
             <input type="number" id="amount-two" placeholder="0" />
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 <footer>
