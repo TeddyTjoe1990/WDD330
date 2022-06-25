@@ -70,9 +70,17 @@ p {
 }
 
 .rate {
-    color: var(--primary-color);
+    color: #2A2E34;
     font-size: 14px;
     padding: 0 10px;
+}
+
+footer {
+    background-color: transparent;
+    color: #2A2E34;
+    padding: 10px;
+    text-align: center;
+    margin-top: 10px;
 }
 
 select:focus,
