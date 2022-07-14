@@ -1,0 +1,1 @@
+const url = "https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=93b04ac2e3dafc69e377e21afa088063"
