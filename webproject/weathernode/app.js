@@ -1,1 +1,15 @@
-const url = "https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=93b04ac2e3dafc69e377e21afa088063"
+const request = require("request")
+const dotenv = require("dotenv").config()
+
+const address = process.argv[2]
+
+const url = `https://api.openweathermap.org/data/2.5/weather?q=${address}&units=metric&appid=${process.env.API_KEY}`
+
+if (!address) {
+    return console.log("Please enter the city name")
+}
+
+request(url, (error, response, body) => {
+    const data = JSON.parse(body)
+    console.log(`It's currently ${data.main.temp}.`)
+})
