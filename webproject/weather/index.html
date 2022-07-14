@@ -11,16 +11,20 @@
 </head>
 
 <body class="dark-theme">
+    <header>
+        <nav>
+            <h1>Weather Application</h1>
+            <input type="button" value="Light/Dark" id="dark">
+        </nav>
+        <hr>
+    </header>
     <div class="container">
-        <header>
-            <input type="text" class="search-box" placeholder="Find your city..." />
-        </header>
-        <input type="button" value="Light/Dark" id="dark">
         <h2 id="dateTime"></h2>
         <div id="loadInfo">
             <div id="icon"><img src='' alt="image of weather" id="tempIcon"></div>
             <br>
-
+            <div id="zipCheck">Input Zip Code</div><br>
+            <input type="text" id="zipCode" placeholder="43212" maxlength="5" required>
             <br><br>
             <div id='output'></div>
             <div id='forecastOutput'></div>
@@ -34,13 +38,15 @@
     </div>
     <!-- end container -->
     <div id="weatherAlert">
+
     </div>
+    <footer>
+        &copy; 2022 | Teddy Tjoe | BYU-Idaho<br />
+        <div id="todaysDate"></div>
+    </footer>
+    <script defer src="js/date.js"></script>
+    <script src="js/main.js" type="module"></script>
+
 </body>
-<footer>
-    &copy; 2022 | Teddy Tjoe | BYU-Idaho<br />
-    <div id="todaysDate"></div>
-</footer>
-<script defer src="js/date.js"></script>
-<script src="main.js" type="module"></script>
 
 </html>
