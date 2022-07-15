@@ -8,8 +8,9 @@
     <link rel="shortcut icon" href="../weatherApp/img/favicon-16x16.png" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
-    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./main.css">
+    <script src="./weather.js" defer></script>
+    <script defer src="date.js"></script>
 </head>
 
 <body>
@@ -25,6 +26,7 @@
         </div>
         <div class="weather loading">
             <h2 class="city">Weather in your city</h2>
+            <div id="todaysDate"></div>
             <h1 class="temp">51°C</h1>
             <div class="flex">
                 <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
@@ -33,6 +35,11 @@
             <div class="humidity">Humidity: 60%</div>
             <div class="wind">Wind speed: 6.2 km/h</div>
         </div>
+        <hr>
+        <footer>
+            &copy;2022 | Teddy Tjoe | BYU-Idaho<br />
+        </footer>
+
     </div>
 </body>
 
