@@ -3,7 +3,7 @@ import { getJSON } from './utilities.js';
 export default class Quake {
     constructor() {
         this.baseUrl =
-            'https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2021-01-01&endtime=2021-12-31';
+            'https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2022-01-01&endtime=2022-12-31';
         // this is where we will store the last batch of retrieved quakes in the model.  I don't always do this...in this case the api doesn't have an endpoint to request one quake.
         this._quakes = [];
     }
